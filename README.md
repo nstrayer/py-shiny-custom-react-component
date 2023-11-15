@@ -1,4 +1,4 @@
-This repo is an example of a python package that defines a simple custom input component for Shiny.
+This repo is an example of a python package that defines a custom input component written in React for Shiny.
 
 ## Structure
 
@@ -7,13 +7,13 @@ The code structure is as follow:
 ```
 package.json        # Contains the dependencies needed to build the components javascript
 srcts/              # Source Typescript files
-  index.ts          # Where we define the input component
-customInputComponent/
-  custom_input.py   # Python functions for the input component
+  index.tsx         # Where we define the component
+customReactComponent/
+  react_input.py    # Python functions for the using the component
   __init__.py       # Used to define exports for python package.
   distjs/           # Where the bundled js files are put
 example-app/
-  app.py            # Example app for the custom-input component
+  app.py            # Example app using the component
 ...                 # ...Various other config files needed for python and js projects
 ```
 
@@ -35,7 +35,7 @@ Install the dependencies for javascript:
 npm install
 ```
 
-Build assets into the `customInputComponent/distjs` folder:
+Build assets into the `customReactComponent/distjs` folder:
 
 ```
 npm run build

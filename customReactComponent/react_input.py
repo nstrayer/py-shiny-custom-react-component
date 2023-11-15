@@ -9,20 +9,19 @@ custom_input_deps = HTMLDependency(
     "shiny-custom-input",
     "1.0.0",
     source={
-        "package": "customInputComponent",
+        "package": "customReactComponent",
         "subdir": str(PurePath(__file__).parent / "distjs"),
     },
     script={"src": "index.js", "type": "module"},
 )
 
 
-def custom_input(id):
+def react_input(id):
     """
-    A shiny input.
+    A shiny input built with React!
     """
     return Tag(
-        # This is the name of the custom tag we created with our webcomponent
-        "shiny-custom-input",
+        "custom-react-input",
         custom_input_deps,
         # Use resolve_id so that our component will work in a module
         id=resolve_id(id),

@@ -2,11 +2,12 @@
 
 from shiny import ui, App, render
 
-from customInputComponent import custom_input
+
+from customReactComponent import react_input
 
 
 app_ui = ui.page_fluid(
-    custom_input("myInput"),
+    react_input("myInput"),
     ui.output_text("valueOut"),
 )
 
